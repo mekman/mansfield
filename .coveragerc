@@ -1,0 +1,7 @@
+[run]
+branch = True
+source = mansfield/*
+include = mansfield/*
+omit = */setup.py
+[report]
+include = mansfield/*
