@@ -16,7 +16,7 @@ functions include:
 $ python
 ```
 ```python
->>> from mansfield import
+>>> from mansfield import searchlight
 
 ```
 
