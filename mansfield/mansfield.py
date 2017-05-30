@@ -5,7 +5,7 @@ from .mri import save_mri
 # from sklearn.cross_validation import KFold
 # from sklearn.cross_validation import LeaveOneLabelOut, PredefinedSplit
 
-__all__ = ["searchlight"]
+__all__ = ["searchlight", "get_searchlight_neighbours_matrix"]
 
 
 def searchlight(X, y, cv, mask_file, fname, radius=6, n_jobs=1,
