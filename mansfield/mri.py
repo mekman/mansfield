@@ -99,7 +99,7 @@ def lowpass_filter(ts, window_length=7, polyorder=3):
 
     Parameters
     ----------
-    ts : array_like, shape (n_tps,)
+    ts : array_like, shape (n_tps,) or (n_voxel, n_tps)
         Time-series data.
     window_length : int
         Length of the window. Must be an odd integer number (default=7).
@@ -109,7 +109,7 @@ def lowpass_filter(ts, window_length=7, polyorder=3):
 
     Returns
     -------
-    tsf : ndarray, shape (n_tps,)
+    tsf : ndarray, shape (n_tps,) or (n_voxel, n_tps)
         Filtered time-series data .
 
     Notes
@@ -167,6 +167,5 @@ def lowpass_filter(ts, window_length=7, polyorder=3):
     #
     # return np.convolve( m[::-1], y, mode='valid')
     # # # replaced after scipy 0.14 release with this
-    # # http://docs.scipy.org/doc/scipy-dev/reference/generated/scipy.signal.savgol_filter.html#scipy.signal.savgol_filter
     return signal.savgol_filter(ts, window_length, polyorder, deriv=0.0,
                                 delta=1.0, axis=-1, mode='interp', cval=0.0)
