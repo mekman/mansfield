@@ -72,4 +72,4 @@ MINOR = _version_minor
 MICRO = _version_micro
 VERSION = __version__
 PACKAGE_DATA = {'mansfield': [pjoin('data', '*')]}
-REQUIRES = ["numpy"]
+REQUIRES = ""
