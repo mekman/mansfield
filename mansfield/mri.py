@@ -167,5 +167,5 @@ def lowpass_filter(ts, window_length=7, polyorder=3):
     #
     # return np.convolve( m[::-1], y, mode='valid')
     # # # replaced after scipy 0.14 release with this
-    return signal.savgol_filter(ts, window_length, polyorder, deriv=0.0,
+    return signal.savgol_filter(ts, window_length, polyorder, deriv=0,
                                 delta=1.0, axis=-1, mode='interp', cval=0.0)
