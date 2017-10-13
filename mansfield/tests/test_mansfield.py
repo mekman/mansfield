@@ -17,4 +17,4 @@ def test_get_searchlight_neighbours_matrix():
     nib.save(nii, 'temp_mask.nii')
     A = ma.get_searchlight_neighbours_matrix('temp_mask.nii')
 
-    npt.assert_equal(A.toarray().shape, (2,2))
+    npt.assert_equal(A.toarray().shape, (2, 2))
