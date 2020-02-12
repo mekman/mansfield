@@ -45,7 +45,7 @@ def searchlight(X, y, cv, mask_file, fname, radius=6, n_jobs=1,
     shape[:3] = mask_img.get_shape()
     shape[-1] = X.T.shape[-1]
 
-    fmri_img = np.zeros((shape))
+    fmri_img = np.zeros((shape.astype(int)))
     fmri_img[ma] = X.T
     fmri_img = nib.Nifti1Image(fmri_img, mask_img.get_affine())
 
